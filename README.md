@@ -8,9 +8,9 @@
 
 ## Test
 
-- Mở file index.js
+- Mở file index.test.ts
 - UnComment test-case muốn chạy
-- Chạy lệnh `node index.js` ở terminal
+- Chạy lệnh `node index.test.ts` ở terminal
 
 ## Một số lưu ý
 
