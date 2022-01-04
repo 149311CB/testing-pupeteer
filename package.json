@@ -13,6 +13,7 @@
     "dotenv": "^10.0.0",
     "jest": "^27.4.5",
     "jest-puppeteer": "^6.0.3",
+    "lighthouse": "^9.2.0",
     "puppeteer": "^13.0.1"
   },
   "devDependencies": {
