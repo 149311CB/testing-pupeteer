@@ -29,8 +29,10 @@ async function getLoadTime(networkType: networkPresets, page: Page) {
         "http://localhost/orangehrm-4.5/orangehrm-4.5/symfony/web/index.php/auth/login",
         {waitUntil: "domcontentloaded"}
     );
+
     const performance = JSON.parse(await page.evaluate(() => JSON.stringify(window.performance.toJSON(), null, 2)))
     const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart
+
     return {performance, loadTime};
 }
 
@@ -92,7 +94,7 @@ describe("Test total time for page to load for the first visit", () => {
     })
 })
 
-const NETWORK_PRESETS = {
+export const NETWORK_PRESETS = {
     'GPRS': {
         'offline': false,
         'downloadThroughput': 50 * 1024 / 8,
@@ -143,4 +145,4 @@ const NETWORK_PRESETS = {
     }
 }
 
-type networkPresets = keyof typeof NETWORK_PRESETS
+export type networkPresets = keyof typeof NETWORK_PRESETS

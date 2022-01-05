@@ -1,5 +1,5 @@
 import dotenv from "dotenv";
-import puppeteer, {HTTPResponse, Page} from "puppeteer";
+import puppeteer, {Page} from "puppeteer";
 
 dotenv.config()
 
@@ -22,25 +22,17 @@ describe("login functionality", () => {
     test("valid credential", done => {
         (async () => {
             try {
-                let response: HTTPResponse | null = null
-                await Promise.all([
+                const [response] = await Promise.all([
+                    page.waitForNavigation(),
                     submitLoginForm(page, process.env.user!, process.env.password!),
-                    page.waitForNavigation().then(result => response = result)
                 ])
-                if (response) {
-                    await page.screenshot({path: `${__dirname}/redirected.png`});
-                    // @ts-ignore
-                    expect(response.status()).toEqual(200)
-                    // @ts-ignore
-                    expect(response.url()).toEqual("http://localhost/orangehrm-4.5/orangehrm-4.5/symfony/web/index.php/dashboard")
-                    const {cookies} = await page.client().send("Network.getAllCookies")
-                    expect(cookies.find(cookie => cookie.name === "PHPSESSID")?.value).toBeTruthy()
-                    await browser.close()
-                    done()
-                } else {
-                    await browser.close()
-                    done(new Error("response is undefined"))
-                }
+                await page.screenshot({path: `${__dirname}/redirected.png`});
+                expect(response?.status()).toEqual(200)
+                expect(response?.url()).toEqual("http://localhost/orangehrm-4.5/orangehrm-4.5/symfony/web/index.php/dashboard")
+                const {cookies} = await page.client().send("Network.getAllCookies")
+                expect(cookies.find(cookie => cookie.name === "PHPSESSID")?.value).toBeTruthy()
+                await browser.close()
+                done()
             } catch (error) {
                 await browser.close()
                 done(error)

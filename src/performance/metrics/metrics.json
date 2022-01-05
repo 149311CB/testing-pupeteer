@@ -1,0 +1,38 @@
+[
+  {
+    "networkType": "WiFi",
+    "metrics": {
+      "Timestamp": 4968.76451,
+      "Documents": 4,
+      "Frames": 1,
+      "JSEventListeners": 25,
+      "Nodes": 518,
+      "LayoutCount": 5,
+      "RecalcStyleCount": 3,
+      "LayoutDuration": 0.05575,
+      "RecalcStyleDuration": 0.1567,
+      "ScriptDuration": 0.443672,
+      "TaskDuration": 1.486926,
+      "JSHeapUsedSize": 8331624,
+      "JSHeapTotalSize": 12386304
+    }
+  },
+  {
+    "networkType": "Regular4G",
+    "metrics": {
+      "Timestamp": 4978.973975,
+      "Documents": 4,
+      "Frames": 1,
+      "JSEventListeners": 15,
+      "Nodes": 501,
+      "LayoutCount": 4,
+      "RecalcStyleCount": 2,
+      "LayoutDuration": 0.061841,
+      "RecalcStyleDuration": 0.154013,
+      "ScriptDuration": 0.368416,
+      "TaskDuration": 1.301481,
+      "JSHeapUsedSize": 8271668,
+      "JSHeapTotalSize": 12386304
+    }
+  }
+]

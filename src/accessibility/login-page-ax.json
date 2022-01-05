@@ -1,0 +1,108 @@
+{
+  "role": "RootWebArea",
+  "name": "OrangeHRM",
+  "children": [
+    {
+      "role": "textbox",
+      "name": "",
+      "readonly": true
+    },
+    {
+      "role": "StaticText",
+      "name": "LOGIN Panel"
+    },
+    {
+      "role": "textbox",
+      "name": ""
+    },
+    {
+      "role": "StaticText",
+      "name": "Username"
+    },
+    {
+      "role": "textbox",
+      "name": ""
+    },
+    {
+      "role": "StaticText",
+      "name": "Password"
+    },
+    {
+      "role": "button",
+      "name": "LOGIN"
+    },
+    {
+      "role": "link",
+      "name": "Forgot your password?"
+    },
+    {
+      "role": "StaticText",
+      "name": "Alternative Login :"
+    },
+    {
+      "role": "combobox",
+      "name": "",
+      "value": "-- Select --",
+      "children": [
+        {
+          "role": "menuitem",
+          "name": "-- Select --",
+          "selected": true
+        }
+      ]
+    },
+    {
+      "role": "button",
+      "name": "Login",
+      "disabled": true
+    },
+    {
+      "role": "StaticText",
+      "name": "OrangeHRM 4.5"
+    },
+    {
+      "role": "StaticText",
+      "name": "© 2005 - 2022"
+    },
+    {
+      "role": "link",
+      "name": "OrangeHRM, Inc"
+    },
+    {
+      "role": "StaticText",
+      "name": ". All rights reserved."
+    },
+    {
+      "role": "link",
+      "name": "LinkedIn OrangeHRM group"
+    },
+    {
+      "role": "StaticText",
+      "name": " "
+    },
+    {
+      "role": "link",
+      "name": "OrangeHRM on Facebook"
+    },
+    {
+      "role": "StaticText",
+      "name": " "
+    },
+    {
+      "role": "link",
+      "name": "OrangeHRM on twitter"
+    },
+    {
+      "role": "StaticText",
+      "name": " "
+    },
+    {
+      "role": "link",
+      "name": "OrangeHRM on youtube"
+    },
+    {
+      "role": "StaticText",
+      "name": " "
+    }
+  ]
+}

@@ -14,7 +14,7 @@ describe("navigation bar ui test", () => {
             );
             await Promise.all([
                 submitLoginForm(page, process.env.user!, process.env.password!),
-                page.waitForNavigation({waitUntil: "networkidle0"})
+                page.waitForNavigation()
             ])
             done()
         })()
